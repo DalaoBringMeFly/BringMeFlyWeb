@@ -4,7 +4,7 @@
     <Input search enter-button="Search" @on-search="handleSearch" style="width: 60%;margin:10px auto" placeholder="Enter something..." />
     <Input v-model="Infor" type="textarea" :readonly="true" :rows="8" style="width: 60%;margin:10px auto" placeholder="Information..." />
     <br />
-    
+
     <button name = "test" v-on:click="show = !show">
     Toggle
     </button>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-
+import {fetch, post} from '../libs/http.js'
 
 //constructor
 export default {
@@ -30,8 +30,9 @@ export default {
     }
   },
   methods: {
-    handleSearch (params) {
-      this.msg = 'Please waiting for searching...'
+    async handleSearch (params) {
+      this.msg = 'Please waiting for searching...';
+      let res = await fetch('/static');
     }
   }
 }
