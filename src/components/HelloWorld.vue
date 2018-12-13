@@ -33,10 +33,15 @@ export default {
   methods: {
 
     async handleSearch (params) {
+      console.log(params);
       this.msg = 'Please waiting for searching...';
-      let res = await fetch('/graphql?query={film(id:3){title,edited}}');
-      console.log(res);
-      this.Infor = res;
+      let res = await fetch('/graphql?query={film(id:3){edited,title}}');
+      console.log(res.data);
+      //this.Infor = JSON.stringify(res.data.data.film);
+      for (var p in res.data.data.film){
+        this.Infor+=p;
+        this.Infor+='\n'
+      }
     }
   }
 }

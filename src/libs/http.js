@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'localhost:5656'
+axios.defaults.baseURL = 'http://127.0.0.1:5656'
 
 /**
  * 封装get方法
