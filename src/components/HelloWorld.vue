@@ -5,11 +5,11 @@
     <Input v-model="Infor" type="textarea" :readonly="true" :rows="8" style="width: 60%;margin:10px auto" placeholder="Information..." />
     <br />
     
-    <button name = "test" v-on:click="show = !show">
+    <button name = "test" v-on:click='show = !show'>
     Toggle
     </button>
   <transition name="fade">
-    <p v-if="show">hello</p>
+    <p v-if="show" name = "showWord">{{testmsg}}</p>
   </transition>
 
 
@@ -26,12 +26,17 @@ export default {
     return {
       msg: 'The Star Wars API',
       Infor: '',
-      show : true
+      show : true,
+      searchWord : '',
+      testmsg : 'hello'
     }
   },
   methods: {
     handleSearch (params) {
-      this.msg = 'Please waiting for searching...'
+      this.msg = 'Please waiting for searching...';
+      this.testmsg = params;
+      searchWord = params;
+      //Test with Get      : curl -g 'http://localhost:5656/graphql?query={film(id:1){title}}'
     }
   }
 }
@@ -59,7 +64,7 @@ a {
   color: #42b983;
 }
 
-.fade-enter-active, .fade-leave-active,.h1-enter-active, .h1-leave-active {
+.fade-enter-active, .fade-leave-active, {
   transition: opacity .5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {

@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+        '/BringMeFlyServer':{
+            target:'http://localhost:5656',//接口的域名
+            changeOrigin:true,
+            pathRewrite:{
+                '^/BringMeFlyServer' : '/BringMeFlyServer'
+            }
+        }
+
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
