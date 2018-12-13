@@ -4,30 +4,42 @@
     <Input search enter-button="Search" @on-search="handleSearch" style="width: 60%;margin:10px auto" placeholder="Enter something..." />
     <Input v-model="Infor" type="textarea" :readonly="true" :rows="8" style="width: 60%;margin:10px auto" placeholder="Information..." />
     <br />
-    <button v-on:click="show = !show">
+    
+    <button name = "test" v-on:click="show = !show">
     Toggle
     </button>
   <transition name="fade">
     <p v-if="show">hello</p>
   </transition>
+
+
   </div>
 </template>
 
 <script>
+
+
+//constructor
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'The Star Wars API',
-      Infor: ''
+      Infor: '',
+      show : true
     }
   },
   methods: {
     handleSearch (params) {
-
+      this.msg = 'Please waiting for searching...'
     }
   }
 }
+
+
+
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -46,4 +58,13 @@ li {
 a {
   color: #42b983;
 }
+
+.fade-enter-active, .fade-leave-active,.h1-enter-active, .h1-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
 </style>
