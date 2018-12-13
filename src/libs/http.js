@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+axios.defaults.baseURL = 'localhost:5656'
+
 /**
  * 封装get方法
  * @param url

@@ -34,8 +34,9 @@ export default {
 
     async handleSearch (params) {
       this.msg = 'Please waiting for searching...';
-      let res = await fetch('/static');
-
+      let res = await fetch('/graphql?query={film(id:3){title,edited}}');
+      console.log(res);
+      this.Infor = res;
     }
   }
 }
