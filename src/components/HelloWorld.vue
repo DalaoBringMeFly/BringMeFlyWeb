@@ -3,6 +3,13 @@
     <h1>{{ msg }}</h1>
     <Input search enter-button="Search" @on-search="handleSearch" style="width: 60%;margin:10px auto" placeholder="Enter something..." />
     <Input v-model="Infor" type="textarea" :readonly="true" :rows="8" style="width: 60%;margin:10px auto" placeholder="Information..." />
+    <br />
+    <button v-on:click="show = !show">
+    Toggle
+    </button>
+  <transition name="fade">
+    <p v-if="show">hello</p>
+  </transition>
   </div>
 </template>
 
