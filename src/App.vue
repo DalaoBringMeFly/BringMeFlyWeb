@@ -52,7 +52,7 @@ body, html {
   animation: rotate-move 2s ease-in-out infinite;
 }
 
-.dot { 
+.dot {
   width: 70px;
   height: 70px;
   border-radius: 50%;

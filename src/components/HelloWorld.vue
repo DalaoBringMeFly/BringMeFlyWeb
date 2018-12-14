@@ -54,6 +54,7 @@
         <h4>How can I support this?</h4>
         <p>With small donations we can keep swapi running for free, please consider throwing us some beer money to say
           thank you. With every $10 we can keep the site up for another month!</p>
+        <a href="http://127.0.0.1:8080/#/about">about us</a>
 
         <p>This project is open source and you can contribute on GitHub.</p>
       </Col>
