@@ -22,6 +22,11 @@ export default {
 }
 
 
+  body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f4d5;
+}
 
 
 </style>
