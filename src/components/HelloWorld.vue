@@ -40,6 +40,8 @@ export default {
       //this.Infor = JSON.stringify(res.data.data.film);
       for (var p in res.data.data.film){
         this.Infor+=p;
+        this.Infor+=':';
+        this.Infor+=res.data.data.film[p];
         this.Infor+='\n'
       }
     }
