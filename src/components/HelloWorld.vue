@@ -204,7 +204,7 @@
   width: 200px;
   height: 200px;
   position: absolute;
-  top: 20%;
+  top: 13%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
