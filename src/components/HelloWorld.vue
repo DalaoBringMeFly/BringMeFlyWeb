@@ -59,7 +59,8 @@
       </Col>
       <Col span="6">
         <h4>How can I use it?</h4>
-        <p>All the data is accessible through our HTTP web API. Consult our documentation if you'd like to get started.</p>
+        <p>All the data is accessible through our HTTP web API. Consult our
+          <a href="http://127.0.0.1:8080/#/about">documentation</a> if you'd like to get started.</p>
 
         <p>Helper libraries for popular programming languages are also provided so you can consume swapi in your favourite
           programming language, in a style that suits you.</p>
@@ -68,9 +69,9 @@
         <h4>How can I support this?</h4>
         <p>With small donations we can keep swapi running for free, please consider throwing us some beer money to say
           thank you. With every $10 we can keep the site up for another month!</p>
-        <a href="http://127.0.0.1:8080/#/about">about us</a>
+        <a href="http://127.0.0.1:8080/#/show">about us</a>
 
-        <p>This project is open source and you can contribute on GitHub.</p>
+        <p>This project is open source and you can contribute on <a href="https://github.com/DalaoBringMeFly">Github</a>.</p>
       </Col>
     </Row>
 
